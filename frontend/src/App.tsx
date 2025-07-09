@@ -21,7 +21,7 @@ const [songInfo, setSongInfo] = useState({
 
     setLoading(true);
 
-    fetch(`http://localhost:8080/api/tempo?artist=${encodeURIComponent(artist)}&title=${encodeURIComponent(title)}`)
+    fetch(`http://localhost:8080/api/songInfo?artist=${encodeURIComponent(artist)}&title=${encodeURIComponent(title)}`)
       .then((res) => res.json())
       .then((data) => {
         setSongInfo({
